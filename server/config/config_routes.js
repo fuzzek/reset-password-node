@@ -6,7 +6,6 @@ module.exports = function(app) {
 	(function mailer_routes() {
 		var MailerCtrl = require('../controllers/mailer');
 		app.post('/api/v1/pass/forgot/:username', MailerCtrl.forgot);
-		app.post('/api/v1/auth/register', AccountCtrl.register, MailerCtrl.validationEmail);
 		app.post('/api/v1/pass/reset/:token', MailerCtrl.reset);
 	})();
 
@@ -18,7 +17,7 @@ module.exports = function(app) {
 	(function authentication_routes() {
 		var AccountCtrl = require('../controllers/account');
 		var MailerCtrl = require('../controllers/mailer');
-		app.get('/api/v1/valid/users/:user_id', AccountCtrl.child);
+			app.post('/api/v1/auth/register', AccountCtrl.register, MailerCtrl.validationEmail);
 		app.post('/api/v1/auth/login', AccountCtrl.validated, passport.authenticate('local'), AccountCtrl.login);	
 		app.get('/api/v1/auth/logout', AccountCtrl.logout);
 		app.get('/api/v1/auth/users', AccountCtrl.query);
