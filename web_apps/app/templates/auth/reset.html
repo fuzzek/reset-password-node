@@ -1,0 +1,29 @@
+<div>
+<h3>Reset Password</h3>
+
+<form class="form-horizontal">
+
+	<div class="control-group">
+		<div class="control-label">New password</div>
+		<div class="controls">
+			<input id="password1" name="password1" required="" type="password" ng-model="user.pass1"></input>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">Repeat Password</div>
+		<div class="controls">
+			<input id="pass2" name="pass2" required="" type="password" ng-model="user.pass2" ng-change="checkPassword()"></input>
+			<label class="label label-warning" ng-hide="passwords_same">Passwords dont match</label>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<button class="btn btn-success" ng-click="resetPassword()">Reset</button>
+		</div>
+
+	</div>
+
+</form>
+</div>

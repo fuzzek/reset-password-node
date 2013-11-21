@@ -1,0 +1,18 @@
+<h3>Get reset password instructions in email</h3>
+<div class="alert alert-error" ng-show="auth.errors && auth.messages.info.message"><strong>Error:</strong> {{auth.messages.info.message}}</div>
+<form class="form-horizontal">
+	<div class="control-group">
+		<div class="control-label">Enter username</div>
+		<div class="controls">
+			<input id="username" name="username" type="text" ng-model="user.username"></input>
+		</div>
+	</div>	
+
+	<div class="control-group">
+		<div class="controls">
+			<button class="btn btn-success" ng-click="getResetPasswordEmail(user)">Get Email</button>
+		</div>
+
+	</div>
+
+</form>

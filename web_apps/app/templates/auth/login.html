@@ -1,0 +1,26 @@
+<h3>Login to our app</h3>
+<div class="alert alert-error" ng-show="auth.errors && auth.messages.info.message"><strong>Error:</strong> {{auth.messages.info.message}}</div>
+<form class="form-horizontal">
+
+	<div class="control-group">
+		<label class="control-label">User name</label>
+		<div class="controls">
+			<input id="username" name="username" required="" type="text" ng-model="user.name"></input>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label">Password</label>
+		<div class="controls">
+			<input id="password1" name="password1" required="" type="password" ng-model="user.pass1"></input>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<button class="btn btn-success" ng-disabled="!passwords_same" ng-click="login()">Login</button>
+		</div>
+
+	</div>
+
+</form>

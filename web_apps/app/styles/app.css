@@ -1,0 +1,64 @@
+/* app css stylesheet */
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: URL('../../common/fonts/Gotham-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: URL('../../common/fonts/GothamMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amplitude-Condensed';
+  src: URL('../../common/fonts/AmplitudeCond-Book.ttf');
+}
+
+
+@font-face {
+  font-family: 'Agenda-Light';
+  src: URL('../../common/fonts/Agenda-Light.ttf');
+}
+
+
+body {
+  font-family: 'Agenda-Light'
+}
+
+input, textarea, select {
+ font-family: 'Agenda-Light' 
+}
+
+button {
+  font-family: 'Agenda-Light';
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}

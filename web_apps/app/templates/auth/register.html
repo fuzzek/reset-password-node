@@ -1,0 +1,41 @@
+<h3>Sign up for a new account</h3>
+<div class="alert alert-error" ng-show="auth.errors && auth.messages.info.message"><strong>Error:</strong> {{auth.messages.info.message}}</div>
+<form class="form-horizontal">
+
+	<div class="control-group">
+		<label class="control-label">User name</label>
+		<div class="controls">
+			<input id="username" name="username" required="" type="text" ng-model="user.name"></input>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label">Password</label>
+		<div class="controls">
+			<input id="password1" name="password1" required="" type="password" ng-model="user.pass1"></input>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label">Repeat Password</label>
+		<div class="controls">
+			<input id="pass2" name="pass2" required="" type="password" ng-model="user.pass2" ng-change="checkPassword()"></input>
+			<label class="label label-warning" ng-hide="passwords_same">Passwords dont match</label>
+		</div>
+	</div>	
+
+	<div class="control-group">
+		<label class="control-label">Email Id</label>
+		<div class="controls">
+			<input id="email" name="email" type="email" ng-model="user.email"></input>
+		</div>
+	</div>	
+
+	<div class="control-group">
+		<div class="controls">
+			<button class="btn btn-success" ng-disabled="!passwords_same" ng-click="register()">Sign up</button>
+		</div>
+
+	</div>
+
+</form>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="loginApp">
+	<title>Login app</title>
+	<head>
+		<script src="./scripts/controllers/authCtrl.js"></script>
+		<script src="./scripts/services/authSvc.js"></script>
+	    <script src="../common/libs/angular/angular.js"></script>		
+	    <script src="../common/libs/angular/angular-cookies.js"></script>
+		<script src="./app.js"></script>		
+	    <script src='../common/libs/underscore/underscore.js'></script>
+
+	    <link rel="stylesheet" href="../common/libs/bootstrap/css/bootstrap.css"></link>
+		<link rel="stylesheet" href="./styles/app.css"></link>
+	</head>
+	<body>
+
+	<div class="container-fluid">
+		<div class="row-fluid offset2">		
+			<div class="span8 hero-unit landing-page-background">
+	    	
+				<div ng-view></div>
+    		</div>
+    	</div>
+	</body>
+</html>
