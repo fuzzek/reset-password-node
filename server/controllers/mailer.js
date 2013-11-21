@@ -7,8 +7,8 @@ var crypto = require('crypto')
 var email   = require("../node_modules/emailjs/email");
 
 var server  = email.server.connect({
-									    user:       "jayram@twyst.in", 
-									    password:   "Singh@005", 
+									    user:       "username", 
+									    password:   "password", 
 									    host:       "smtp.gmail.com", 
 									    ssl:        true
 			});
@@ -24,7 +24,7 @@ module.exports.validationEmail = function(req, res) {
 		else {
 			user = eval(user)[0];
 			var token = keygen._();
-			var validation_link = "http://twyst.in/merchant/#/validate/email/" + token;
+			var validation_link = "http://localhost:3000/#/validate/email/" + token;
 			Account.findOneAndUpdate(
 							{username: user.username}, 
 							{$set: {'validated.email_validated.token': token} }, 
@@ -73,7 +73,7 @@ module.exports.forgot = function(req, res) {
 		else {
 			user = eval(user)[0];
 			var token = keygen._();
-			var reset_link = "http://twyst.in/merchant/#/auth/reset/" + token;
+			var reset_link = "http://localhost:3000/#/auth/reset/" + token;
 			Account.findOneAndUpdate(
 							{username: user.username}, 
 							{$set: {reset_password_token: token} }, 
