@@ -14,12 +14,6 @@
     "mocha": "latest",
     "supertest": "latest"
   },
-  "name": "twyst",
-  "subdomain": "appa-twyst",
-  "scripts": {
-    "start": "node app.js",
-    "test": "mocha --recursive -R spec -t 5000"
-  },
   "version": "0.0.1",
   "engines": {
     "node": "0.8.x"
